@@ -1,0 +1,50 @@
+// exercise 2.1
+
+var hashtag = "#";
+while(hashtag.length < 8){
+	console.log(hashtag)
+    hashtag=hashtag+"#"
+}
+
+// exercise 2.2 
+
+for (var counter = 1; counter < 101; counter = counter + 1) {
+  if(counter % 3 == 0 && counter % 5 == 0) {
+    console.log("fizzbuzz");
+  } else if (counter % 3==0){
+    console.log("fizz");
+  } else if (counter % 5==0){
+    console.log("buzz");
+  } else{
+console.log(counter);
+  }
+}
+
+//exercise 2.3
+
+var size = Number(prompt("Pick a number", ""));
+if (!isNaN(size)){
+var thing = "";
+
+for(var counter = 0; counter < size; counter++){
+
+	var line = "";
+
+	for (var counter2 = 0; counter2 < size; counter2++){
+
+		if(counter%2==0 && counter2%2!=0){ line = line+" ";}
+		else if(counter%2==0 && counter2%2==0){ line = line+"#";}
+		else if(counter%2!=0 && counter2%2==0){ line = line+" ";}
+		else {line = line+"#";}
+	}
+
+	line = line+"\n";
+
+	thing = thing+line;
+
+}
+
+console.log(thing);
+} else {
+	console.log("That's not a number!!!11!")
+}
